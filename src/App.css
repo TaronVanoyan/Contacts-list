@@ -1,38 +1,19 @@
-.App {
-  text-align: center;
+body, ul, p, h1 {
+    margin: 0;
+    padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+    font-family: 'Dosis_light';
+    src: local('Dosis_light'), url(./fonts/Dosis-Light.ttf) format('woff');
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@font-face {
+    font-family: 'Libre_franklin';
+    src: local('Libre_franklin'), url(./fonts/LibreFranklin.ttf) format('woff');
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@font-face {
+    font-family: 'Cairo_regular';
+    src: local('Cairo_regular'), url(./fonts/Cairo-Regular.ttf) format('woff');
 }

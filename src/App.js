@@ -1,25 +1,26 @@
-import logo from './logo.svg';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import {useSelector} from 'react-redux';
+import React from 'react';
+
+import GuardedRoute from './service/GuardedRoute';
+import {SignIn, SignOut, Dashboard, Profile} from './components';
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const isAuthenticated = useSelector(state => state.isAuthenticated);
+
+    return (
+        <div className="App">
+            {isAuthenticated && <SignOut/>}
+            <Router>
+                <Switch>
+                    <GuardedRoute path='/profile' component={Profile} auth={isAuthenticated}/>
+                    <GuardedRoute path='/dashboard' component={Dashboard} auth={isAuthenticated}/>
+                    <Route path='/' component={SignIn}/>
+                </Switch>
+            </Router>
+        </div>
+    );
 }
 
 export default App;

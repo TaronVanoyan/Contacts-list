@@ -1,0 +1,58 @@
+.profile {
+    width: 100%;
+    max-width: 500px;
+    border: 1px solid #39678a;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.profile__edit {
+    padding: 30px;
+    list-style-type: none;
+}
+
+.profile__edit_row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.profile__edit_row > input {
+    border: 1px solid #cecece;
+    padding: 7px;
+    font-size: 15px;
+    border-radius: 5px;
+    background-color: #ffffff !important;
+    outline: none;
+}
+
+.profile__edit_row > label {
+    font-size: 20px;
+    font-family: system-ui, "Cairo_regular", sans-serif;
+}
+
+.profile__edit_title {
+    padding: 20px;
+    background: #39678a;
+    color: white;
+    text-align: center;
+    font-family: system-ui, "Cairo_regular", sans-serif;
+    font-size: 30px;
+}
+
+.save__changes {
+    width: 100px;
+    height: 40px;
+    border: 0;
+    padding: 7px;
+    font-size: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    background-color: #39678a;
+    outline: none;
+    box-shadow: 0 1px 8px -2px black;
+}
